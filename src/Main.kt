@@ -32,7 +32,7 @@ fun main() {
     snacks[1] = "dog food"
     println(snacks)
 
-    //removeitems
+    //remove items from list
     snacks.removeAt(0)
 
     println(snacks)
@@ -58,6 +58,25 @@ fun main() {
     for (snack in snacks) {
         println(snack)
     }
+
+    //searching for an item
+    println("pizza is in this list ${snacks.contains("pizza")}")
+    println("hours in not in the list: ${snacks.contains("hours")}")
+
+    //getting index of an item
+    println("pizza index:${(snacks.indexOf("pizza"))}")
+
+
+    //loop useing a list
+    for (i in 0 ..<snacks.size) {
+        println("$i:${snacks[i]}")
+    }
+
+    //loop getting index and values
+    for((i, snack) in snacks.withIndex()) {
+        println("$i:${snack}")
+    }
+
 
 }
 
